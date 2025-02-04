@@ -1,0 +1,138 @@
+/* Atur tampilan dasar dropdown menu */
+.dropdown-menu {
+    display: none;
+    margin: 0;
+    padding: 0;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+/* Style untuk dropdown submenu */
+.dropdown-submenu {
+    position: relative;
+}
+
+/* Posisi submenu */
+.dropdown-submenu .dropdown-menu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 1px;
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+}
+
+/* Tampilkan menu dropdown utama saat hover pada nav-item */
+.nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Tampilkan submenu hanya saat hover pada parent submenu-nya */
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Style untuk item dropdown */
+.dropdown-item {
+    padding: 0.5rem 1rem;
+}
+
+/* Warna link navbar */
+.navbar-nav .nav-item .nav-link:not(.active) {
+    color: white !important;
+    opacity: 1 !important;
+}
+
+.sidebar {
+    width: 200px;
+    float: left;
+    padding: 20px;
+    background: #f4f4f4;
+}
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Tambahkan style untuk navbar */
+.navbar {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    min-height: 45px;
+}
+
+/* Kecilkan logo */
+.navbar .logo {
+    max-height: 35px;
+    width: auto;
+}
+
+/* Sesuaikan ukuran link dan item di navbar */
+.navbar .nav-link {
+    padding: 0.3rem 1rem !important;
+    font-size: 0.9rem;
+}
+
+.navbar .dropdown-item {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Sesuaikan margin dropdown menu */
+.dropdown-menu {
+    margin-top: 0.2rem !important;
+}
+
+/* Sesuaikan ukuran icon dan text di profile dropdown */
+.navbar .nav-item .fas {
+    font-size: 0.9rem;
+}
+
+.navbar .dropdown-menu small {
+    font-size: 0.7rem;
+}
+
+/* Perbaikan tampilan submenu dan arrow */
+.dropdown-submenu > .dropdown-toggle:after {
+    display: inline-block;
+    margin-left: auto;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid transparent;
+    border-right: 0;
+    border-bottom: 0.3em solid transparent;
+    border-left: 0.3em solid;
+    margin-top: 8px;
+}
+
+.dropdown-submenu > .dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+/* Override Bootstrap's default display behavior */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Perbaikan hover behavior */
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Pastikan submenu tetap terlihat saat hover */
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #f8f9fa;
+    color: #16181b;
+}
+
+/* Hapus arrow default dari Bootstrap untuk submenu */
+.dropdown-toggle.dropdown-item::after {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
